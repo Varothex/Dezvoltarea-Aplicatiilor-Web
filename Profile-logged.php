@@ -1,12 +1,18 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en-UK">
 
 <head>
-	<title>Doctor Doom</title>
+	<title>Doctor Doom/Profile/numele contului</title>
 	<img class="ddpic" src="/img/Doctor Doom.png" alt="Doctor Doom">
 	<meta charset="utf-8">
 	<!--<link rel="stylesheet" href="Tema 2.css">-->
 	<!--<script type="text/javascript" src="Tema2.js"></script>-->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+    <!--<style type="text/css">-->
 	
 	<style>
 	
@@ -22,7 +28,7 @@
 
 		#wall
 		{
-			background-image: url('/img/Arcane Energy.png');
+			background-image: url('/img/wall.jpeg');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
@@ -39,6 +45,7 @@
 			font-weight: bold;
 			text-align: center;
 			padding: 10px;
+			opacity:0.9;
 		}
 
 		.menubutton
@@ -70,9 +77,9 @@
 
 		#column1
 		{
-			background-image: url('/img/Doctor Doom c1.png');
+			background-image: url('/img/DDN c1.png');
 			background-repeat: no-repeat;
-			background-size: 300px 430px;
+			background-size: 307px 430px;
 			/*background-color: lightgreen;*/
 			float: left;
 			width: 20%;
@@ -87,11 +94,12 @@
 			padding: 20px;
 			width: 60%;
 			height: 430px;
+			opacity:0.9;
 		}
 		
 		#column2
 		{
-			background-image: url('/img/Doctor Doom c2.png');
+			background-image: url('/img/DDN c2.jpeg');
 			background-repeat: no-repeat;
 			background-size: 307px 450px;
 			/*background-color: lightgreen;*/
@@ -115,6 +123,7 @@
 			text-decoration: underline;
 			padding: 25px;
 			height: 70px;
+			opacity:0.9;
 		}
 
 		/*a:link
@@ -155,10 +164,10 @@
 	<br>
 	<br>
 
-	<h1 style="text-align: center">Doctor Doom</h1>
+	<h1 style="text-align: center; color: green">Profile</h1>
 
 	<div class="menu">
-		<button class="menubuttonon">Menu</button>
+		<button class="menubutton"><a href="Menu-logged.html">Menu</a></button>
 		<button class="menubutton">Character Details</button>
 		<button class="menubutton">Comics</button>
 		<button class="menubutton">Games</button>
@@ -167,7 +176,7 @@
 		<button class="menubutton">Merch</button>
 		<button class="menubutton">Forum</button>
 		<button class="menubutton">Fanart</button>
-		<button class="menubutton"><a href="Profile-logged.php">Profile</a></button>
+		<button class="menubuttonon">Profile</button>
 	</div>
 
 	<section>
@@ -175,23 +184,28 @@
 		<div id="column1"></div>
 	
 		<article>
-			<h2>O mica descriere</h2>
-			<p>Îmi doresc să fac o revistă de supereroi, în care să scriu cât mai multe informații și să am cât mai multe poze cu un anumit personaj. Mi-ar plăcea să conțină o pagina de inceput in care prezint site-ul si scopul lui, o listă cu toate puterile si cu povestea lui, benzi desenate, personajul in jocuri video in care se prezinta abilitatile, strategia s.a.m.d., filmele sau seriale in care a aparut precum si linkuri unde pot fi vazute, o galerie in care sunt poze cu el, link-uri spre alte site-uri de unde se poate lua merch cu el, forumul cu comentarii in care se poate tag-ui o anumita poza/abonati pentru a se vorbi la subiect, o alta galerie cu poze neoficiale, ale abontilor si sa poti sa-ti faci cont. Toate acestea vor fi stocate intr-o baza de date. Conturile vor contine o porecla unica, adresa de mail si o parola. Oamenii se pot autentifica pentru a discuta pe forum, pentru a posta poze sau impresii legate de personaj. Vor fi clasificați în funcție de activitate, in patru categorii, fiecare cu o iconita specifica pentru a arata rangul: </p>
-			<ol>
-				<li>Cei normali pot să vadă și să reacționeze prin aprecieri. Pentru a deveni veterani trebuie să dea un anumit număr de aprecieri.</li>
-				<li>Veteranii pot face tot ce pot cei normali, dar pot de asemenea și să posteze fanart sau sa scrie in forum. Pentru a deveni moderatori trebuie să aibă un anumit număr de postări și să treacă un mic test pentru a vedea dacă sunt cu adevărat fani. Testul este unic per cont, adica o data facut nu mai trebuie sa-l mai dea o a doua oara.</li>
-				<li>Moderatorii pot face ce pot și veteranii, dar mai pot și să editeze postări. Pentru a rămâne moderator, trebuie să posteze cel puțin a dată pe săptămână.</li>
-				<li>Administratorii pot face toate acestea, dar pot de asemenea să ban-eze oameni și să editeze site-ul.</li>
-			</ol>
+			<h2>Aceasta este pagina contului</h2>
+			
+			<p>Bine ai venit, <?php echo $_SESSION['username']; ?> !</p>
+			
+			<!--<button class="menubutton"><a href="register.php">Login</a></button>-->
+			<button class="menubutton"><a href="CRUD.php">Account Details</a></button>
+			<button class="menubutton"><a href="reset-password.php">Reset your password</a></button>
+			<button class="menubutton"><a href="logout.php">Logout</a></button>
+			<?php 
+				//echo "<a href='read.php ' title='View Account' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+				/*echo "<a href='update.php?id=". $row['id'] ."' title='Update Account' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+				echo "<a href='delete.php?id=". $row['id'] ."' title='Delete Account' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+			*/?>
 		</article>
 
 		<div id="column2"></div>
 
 	</section>
-
+	
 	<footer>
 		<!--<a class="links" href="https://www.youtube.com/watch?v=q5FcKAe4M1w" target="_blank">Aici vor fi link-uri.</a>-->
 	</footer>
-
+	
 </body>
 </html>

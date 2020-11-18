@@ -1,4 +1,9 @@
 <?php
+/*define('DB_SERVER', 'sql206.byetcluster.com');
+define('DB_USERNAME', 'epiz_27117785');
+define('DB_PASSWORD', 'fiCNhIXlBS0cZ');
+define('DB_NAME', 'epiz_27117785_doctor_doom');*/
+
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
