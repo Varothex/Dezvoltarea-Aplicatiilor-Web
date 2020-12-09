@@ -1,5 +1,4 @@
 <?php
-<?php
 define('DB_SERVER', 'sql206.epizy.com');
 define('DB_USERNAME', 'epiz_27117785');
 define('DB_PASSWORD', 'fiCNhIXlBS0cZ');
