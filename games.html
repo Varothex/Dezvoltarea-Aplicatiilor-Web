@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+	<title>Doctor Doom</title>
+	<img class="ddpic" src="/img/Doctor Doom.png" alt="Doctor Doom">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+	
+		.ddpic
+		{
+			float: left;
+			position:-webkit-sticky;
+			position: sticky;
+			top: 0;
+			height: 5%;
+			width: 5%;
+		}
+
+		#wall
+		{
+			background-image: url('/img/Arcane Energy.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+	
+		*
+		{
+			box-sizing: border-box;
+		}
+		
+		.menu
+		{
+			background-color: darkgreen;
+			font-weight: bold;
+			text-align: center;
+			padding: 10px;
+		}
+
+		.menubutton
+		{
+			background-color: darkgreen;
+			border: none;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+		
+		
+		.menubuttonon
+		{
+			
+			background-color: lightgreen;
+			color: black;
+			border: none;
+			padding: 16px;
+			font-size: 16px;
+		}
+
+		.menubutton:hover
+		{
+			background-color: lightgreen;
+			color: black;
+		}
+
+		#column1
+		{
+			background-image: url('/img/Doctor Doom c1.png');
+			background-repeat: no-repeat;
+			background-size: 100%;
+            float: left;
+            display: inline-block;
+			width: 20%;
+			height: 500px;
+        }
+		
+		article
+		{
+			text-align: center;
+			background-color: green;
+            display: inline-block;
+			padding: 3%;
+			width: 60%;
+            //font-size:2vw;
+            height: 100%;
+		}
+		
+		#column2
+		{
+			background-image: url('/img/Doctor Doom c2.png');
+			background-repeat: no-repeat;
+            background-size: 100%;
+			float: right;
+			width: 20%;
+			height: 500px;
+		}
+		
+		section:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		footer
+		{
+			color: white;
+			background-color: darkgreen;
+			text-align: center;
+			text-decoration: underline;
+			padding: 25px;
+			height: 70px;
+		}
+
+		/*a:link
+		{
+			color: white;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:visited
+		{
+			color: lightgreen;
+			background-color: transparent;
+			text-decoration: none;
+		}
+		
+		a:hover
+		{
+			color: black;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+		
+		a:active
+		{
+			color: white;
+			background-color: transparent;
+			text-decoration: underline;
+		}*/
+
+	</style>
+	
+</head>
+
+<body id="wall">
+
+	<br>
+	<br>
+	<br>
+
+	<h1 style="text-align: center">Doctor Doom</h1>
+
+	<div class="menu">
+		<a href="menu.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
+		<a href="character-details.html" title='Character Details' data-toggle='tooltip'><button class="menubutton">Character Details</button></a>
+		<a href="comics.html" title='Comics' data-toggle='tooltip'><button class="menubutton">Comics</button></a>
+		<button class="menubuttonon">Games</button>
+		<button class="menubutton">Movies</button>
+		<button class="menubutton">Gallery</button>
+		<button class="menubutton">Merch</button>
+		<button class="menubutton">Forum</button>
+		<button class="menubutton">Fanart</button>
+		<a href="profile.html" title='Profile' data-toggle='tooltip'><button class="menubutton">Profile</button></a>
+	</div>
+
+	<section>
+
+		<div id="column1"></div>
+	
+		<article>
+			<h2>Marvel Future Fight</h2>
+
+            <img src="/img/mff.png" style="height: 200px; float: right;" alt="Doctor Doom in MFF">
+            <p>A brilliant scientist and one-time colleague of Reed Richards', Victor Von Doom's arrogance turned to unfettered megalomania when a lab accident scarred his face for life. Blaming Reed for his own mistake, Von Doom obsessively plotted his revenge, encasing himself in a suit of metal armor and brooding in secret. He staged a violent coup against his home country of Latveria, a small eastern European nation, and emerged as its new ruler, the dreaded Doctor Doom. From his throne, Doom enacts his diabolical machinations, slowed only by the valiant efforts of the Fantastic Four, as well as his own unbridled hubris.</p>
+
+            <br>
+
+            <ol style="text-align: left; inline-block"><h1>Details:</h1>
+                <li>Type: Universal <img src="/img/Universal.png" style="height: 20px;" alt="universal logo">
+                <li>Base Tier: Tier-2
+                <li>Allies:	Human
+                <li>Gender:	Male
+                <li>Side: Super Villain
+                <li>Biometrics: Epic Quest: First Family - Ruler of Latveria
+                <li>Uniform: Modern
+            </ol>
+
+            <br>
+
+            <ol style="text-align: left; inline-block"><h1>Skills:</h1>
+                <li><p><b>Leadership:</b> Waste of Time</p>
+                    <p>Apply to All Allies: When debuffed removes all debuffs for 12 Sec.</p>
+                    <p>Cooldown Time: 20 seconds</p>
+
+                <li><p><b>Passive Skill 1:</b> Doombot Decoy</p>
+                    <p>Apply to Self: After Doombot is destroyed, an avatar appears with 100% of Max HP.</p>
+                    <p>Cooldown Time: 300 seconds</p>
+
+                <li><p><b>Passive Skill 2:</b> Born Ruler</p>
+                    <p>Apply to Self: Increases Skill damage by 25% and increases Bonus Damage by 12%, 50% chance to penetrate with SUPER ARMOR, BARRIER, SHIELD, ALL DAMAGE IMMUNE, INVINCIBLE effect and Super Armor, All Defenses +25% ↑</p>
+
+                <li><p><b>Active Skill 1:</b> Devil's Grab</p>
+                    <p>Applies to Enemies: Energy Damage 183% of Energy Attack + 160 Energy Damage, Stun (2 Sec.), Deals 20% Burn damage every 1 sec. (5 Sec.)
+                    <p>Applies to Self: 20% Ignore Defense (2 Sec.), Increases All Attacks by +5%, All Speed by +1%, and Critical Rate by +5%, removes Incapatitation. (5 Sec.)
+                    <p>Cooldown Time: 6 seconds</p>
+
+                <li><p><b>Active Skill 2:</b> Face Your Doom</p>
+                    <p>Applies to Enemies: Energy Damage 113% of Energy Attack + 160 Energy Damage, Incapatitation (Removes Active Buff from target) (10 Sec.), Fracture (10 Sec.), 100% chance to remove the area where an enemy has placed a speial effect. Removes effect(s): HP RECOVERY, TIME FREEZING, SHIELD, BARRIER, ALL DAMAGE IMMUNE, REFLECT ALL ATTACKS (2 Sec.), -20% decrease of All Attacks. (5 Sec.)</p>
+                    <p>Cooldown Time: 14 seconds</p>
+
+                <li><p><b>Active Skill 3:</b> Fusion Energy</p>
+                    <p>Applies to Enemies: Energy Damage 25% of Energy Attack + 11 Energy Damage, -2% decrease of All Defenses. (Stack up to -35%) (10 Sec.)
+                    <p>Applies to Self: Invincible (5 Sec.), Accumulates 150% of True Damage regardless of Defense and Dodge Rate stats, The total true damage accumulated cannot exceed 15% of HP. (10 Sec.), Increases Attack by +15% for each 1% of damage taken. (10 Sec.)
+                    <p>Cooldown Time: 15 seconds
+
+                <li><p><b>Active Skill 4:</b> Anti-Matter Pistol</p>
+                    <p>Applies to Enemies: Energy Damage 500% of Energy Attack + 160 Energy Damage, Fear (2 Sec.)</p>
+                    <p>Applies to Self: Ignores target's Dodge Rate by 40%. (3 Sec.)</p>
+                    <p>Cooldown Time: 15 seconds</p>
+
+                <li><p><b>Active Skill 5:</b> Science and Magic</p>
+                    <p>Applies to Enemies: Energy Damage 319% of Energy Attack + 160 Energy Damage, Deals 35% Burn damage every 1 sec. (5 Sec.), Bind (3 Sec.), Stun (3 Sec.)</p>
+                    <p>Applies to Self: 25% recovery of Max HP. (1 Sec.). Move using the V-Pad while using the Skill</p>
+                    <p>Cooldown Time: 25 seconds</p>
+            </ol>
+			
+			<h2>Marvel Contest of Champions</h2>
+            <img src="/img/mcoc.jpeg" style="height: 200px; float: right;" alt="Doctor Doom in MCOC">
+            <p>Leaving his tribe in Latveria, Victor Von Doom moved to the United States to study at the Empire State University where he combined sorcery and technology to create fantastic inventions. Disregarding the warnings of fellow classmate Reed Richards, one of his inventions malfunctioned resulting in an explosion that severely damaged his face. Expelled after the incident, Victor began traveling the world eventually collapsing exhausted, on a Tibetan mountainside where he was rescued by a clan of monks. Mastering their discipline and forging himself a suit of armor, Victor took on the mantle Doctor Doom, his mission to serve revenge on those he holds responsible for his accident.</p>  
+            <br>
+            <br> 
+			
+			<h2>Fortnite</h2>
+            <img src="/img/fortnite.png" style="height: 200px; float: right;" alt="Doctor Doom in Fortnite">
+            <p>Doctor Doom is a Marvel Series Outfit in Fortnite: Battle Royale that can be obtained at Level 67 of the Chapter 2: Season 4 Battle Pass. Being the master of Arcane Arts and a supervillain in the Marvel Comics, Doctor Doom wears Titanium Armor that is nuclear powered and was created by a group of tibetan monks. His armor is cloaked with a green furry hood that makes him look more menacing. His God Emperor Style changes his armor to Gold and coat to white, thus turning him into God Emperor Doom, the ruler of a planet known as Battleworld in the Comics. His Foils change him into either Silver, Gold, or Rainbow and leave only his outlines visible. Doctor Doom (full name Doctor Victor Von Doom), along with many other marvel heroes and villains, was summoned by Thor to Apollo to help fight against Galactus. Shortly after Doom arrived, he took over Pleasant Park, and transformed it into Doom's Domain.</p>
+            <br>
+            <br> 
+			
+			<h2>Marvel Puzzle Quest</h2>
+            <img src="/img/mpq.jpg" style="height: 200px; float: right;" alt="Doctor Doom in MPQ">
+            <p>Victor Von Doom never actually earned his doctorate. Jealous of Reed Richards' multiple advanced degrees, he requires his Latverian subjects to use the title under penalty of death.</p>
+			
+		</article>
+
+		<div id="column2"></div>
+
+	</section>
+
+	<footer>
+		<!--<a class="links" href="https://www.youtube.com/watch?v=q5FcKAe4M1w" target="_blank">Aici vor fi link-uri.</a>-->
+	</footer>
+
+</body>
+</html>

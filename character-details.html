@@ -5,6 +5,7 @@
 	<title>Doctor Doom</title>
 	<img class="ddpic" src="/img/Doctor Doom.png" alt="Doctor Doom">
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--<link rel="stylesheet" href="Tema 2.css">-->
 	<!--<script type="text/javascript" src="Tema2.js"></script>-->
 	
@@ -69,36 +70,42 @@
 			color: black;
 		}
 
+        li
+        {
+            padding: 2%;
+        }
+
 		#column1
 		{
 			background-image: url('/img/Doctor Doom c1.png');
 			background-repeat: no-repeat;
-			background-size: 300px 430px;
-			/*background-color: lightgreen;*/
-			float: left;
+			background-size: 100%;
+            float: left;
+            display: inline-block;
 			width: 20%;
-			height: 430px;
-		}
+			height: 500px;
+            //background-repeat: repeat;
+        }
 		
 		article
 		{
 			text-align: center;
 			background-color: green;
-			float: left;
-			padding: 20px;
+            display: inline-block;
+			padding: 3%;
 			width: 60%;
-			//height: 430px;
+            //font-size:2vw;
+            height: 100%;
 		}
 		
 		#column2
 		{
 			background-image: url('/img/Doctor Doom c2.png');
 			background-repeat: no-repeat;
-			background-size: 307px 450px;
-			/*background-color: lightgreen;*/
+            background-size: 100%;
 			float: right;
 			width: 20%;
-			height: 430px;
+			height: 500px;
 		}
 		
 		section:after
@@ -162,7 +169,7 @@
 		<a href="menu.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
 		<button class="menubuttonon">Character Details</button>
 		<a href="comics.html" title='Comics' data-toggle='tooltip'><button class="menubutton">Comics</button></a>
-		<button class="menubutton">Games</button>
+		<a href="games.html" title='Games' data-toggle='tooltip'><button class="menubutton">Games</button></a>
 		<button class="menubutton">Movies</button>
 		<button class="menubutton">Gallery</button>
 		<button class="menubutton">Merch</button>
@@ -176,7 +183,20 @@
 		<div id="column1"></div>
 	
 		<article>
-			<h2>Why is Doctor Doom considered so highly by Marvel fans?</h2>
+            <h2 style="text-align:left">Character details:</h2>
+            <ol style="text-align:left">
+                <li><b>Real Name:</b> Victor von Doom
+                <li><b>Height:</b> 6'2" (188 cm)/6'7" (200.7 cm) in armor
+                <li><b>Weight:</b> 200 lbs. (91 kg)/415 lbs. (188 kg) in armor
+                <li><b>Birthplace:</b> Latveria
+                <li><b>Parents:</b> Cynthia von Doom (mother), Werner von Doom (father)
+                <li><b>First appearance:</b> The Fantastic Four #5 (July 1962)
+                <li><b>Created by:</b> Stan Lee (writer) and Jack Kirby (artist)
+            </ol>
+
+            <br>
+
+			<h1>Why is Doctor Doom considered so highly by Marvel fans?</h1>
 			
 			<p>Because Dr. Doom is an incredibly complex character.</p>
 			<p>Sure, Thanos is super awesome and badass, but Dr. Doom is more of a different type of badass.</p>

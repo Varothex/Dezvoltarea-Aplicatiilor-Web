@@ -1,6 +1,7 @@
 <?php
 // Initialize the session
 session_start();
+require_once "token.php";
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
@@ -80,7 +81,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["username"] = $username; 
+							
+							//Token
+							$token = Token::generate_token(session_id());
+							setcookie("id", session_id());
+							setcookie("token", $token);
 
 							$r_query = "SELECT rank FROM users WHERE id = ".$id;
                             $rank = mysqli_query($link, $r_query);
@@ -134,8 +140,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/testlogin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }

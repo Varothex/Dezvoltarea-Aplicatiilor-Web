@@ -21,7 +21,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $username = $input_name;
     }
     
-    /* Validate address address
+    /* Validate address
     $input_address = trim($_POST["address"]);
     if(empty($input_address)){
         $address_err = "Please enter an address.";     
@@ -111,6 +111,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Record</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
@@ -121,6 +122,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     </style>
 </head>
 <body>
+    <header>
+	    <?php include('includes/header-logged.php'); ?>
+	</header>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -137,7 +141,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                         </div>
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="CRUD.php" class="btn btn-default">Cancel</a>
+                        <a href="account_details.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
             </div>        

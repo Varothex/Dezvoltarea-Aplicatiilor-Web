@@ -13,6 +13,7 @@ if (!isset($_SESSION['username']))
     <title>User details</title>
 	<img class="ddpic" src="/img/Doctor Doom.png" alt="Doctor Doom">
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<style>
 	
@@ -44,7 +45,7 @@ if (!isset($_SESSION['username']))
 		{
 			background-color: green;
 			border: none;
-			padding: 32px;
+			padding: 2%;
 			font-size: 16px;
 			margin-left: auto;
 			margin-right: auto;
@@ -56,7 +57,7 @@ if (!isset($_SESSION['username']))
 			background-color: darkgreen;
 			border: none;
 			color: white;
-			padding: 16px;
+			padding: 3%;
 			font-size: 16px;
 			transition-duration: 0.4s;
 			cursor: pointer;
@@ -140,6 +141,6 @@ if (!isset($_SESSION['username']))
             </div>        
         </div>
     </div>
-	<p style="margin-bottom: 10%;"><a href='profile-logged.php' title='Back' data-toggle='tooltip'><button class='menubutton'>Back</button></a></p>
+	<p style="margin-bottom: 5%;"><a href='profile-logged.php' title='Back' data-toggle='tooltip'><button class='menubutton'>Back</button></a></p>
 </body>
 </html>

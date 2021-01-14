@@ -1,18 +1,15 @@
 <?php
-session_start();
-if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
-    die('Session MAY have been hijacked');
-}
+    session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en-UK">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-	<title>Doctor Doom/Profile/numele contului</title>
+	<title>Doctor Doom</title>
 	<img class="ddpic" src="/img/Doctor Doom.png" alt="Doctor Doom">
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<style>
 	
@@ -28,7 +25,7 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 
 		#wall
 		{
-			background-image: url('/img/wall.jpeg');
+			background-image: url('/img/Arcane Energy.png');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
@@ -45,7 +42,6 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 			font-weight: bold;
 			text-align: center;
 			padding: 10px;
-			opacity:0.9;
 		}
 
 		.menubutton
@@ -75,16 +71,21 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 			color: black;
 		}
 
+        li
+        {
+            padding: 2%;
+        }
+
 		#column1
 		{
-			background-image: url('/img/DDN c1.png');
+			background-image: url('/img/Doctor Doom c1.png');
 			background-repeat: no-repeat;
 			background-size: 100%;
-            margin-top: 15%;
-			float: left;
+            float: left;
+            display: inline-block;
 			width: 20%;
-			height: 200px;
-		}
+			height: 500px;
+        }
 		
 		article
 		{
@@ -93,18 +94,17 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
             display: inline-block;
 			padding: 3%;
 			width: 60%;
-			height: 430px;
-			opacity:0.9;
+            height: 100%;
 		}
 		
 		#column2
 		{
-			background-image: url('/img/DDN c2.jpeg');
+			background-image: url('/img/Doctor Doom c2.png');
 			background-repeat: no-repeat;
-			background-size: 100%;
+            background-size: 100%;
 			float: right;
 			width: 20%;
-			height: 430px;
+			height: 500px;
 		}
 		
 		section:after
@@ -122,7 +122,6 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 			text-decoration: underline;
 			padding: 25px;
 			height: 70px;
-			opacity:0.9;
 		}
 
 	</style>
@@ -135,19 +134,19 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 	<br>
 	<br>
 
-	<h1 style="text-align: center; color: green">Profile</h1>
+	<h1 style="text-align: center">Doctor Doom</h1>
 
 	<div class="menu">
-		<a href="menu-logged.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
-		<button class="menubutton">Character Details</button>
-		<button class="menubutton">Comics</button>
-		<button class="menubutton">Games</button>
+		<a href="menu.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
+		<a href="character-details.html" title='Character Details' data-toggle='tooltip'><button class="menubutton">Character Details</button></a>
+		<a href="comics.html" title='Comics' data-toggle='tooltip'><button class="menubutton">Comics</button></a>
+		<a href="games.html" title='Games' data-toggle='tooltip'><button class="menubutton">Games</button></a>
 		<button class="menubutton">Movies</button>
 		<button class="menubutton">Gallery</button>
 		<button class="menubutton">Merch</button>
 		<button class="menubutton">Forum</button>
-		<a href="fanart.php" title='Fanart' data-toggle='tooltip'><button class="menubutton">Fanart</button></a>
-		<button class="menubuttonon">Profile</button>
+		<button class="menubuttonon">Fanart</button>
+		<a href="profile.html" title='Profile' data-toggle='tooltip'><button class="menubutton">Profile</button></a>
 	</div>
 
 	<section>
@@ -155,20 +154,24 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT']) {
 		<div id="column1"></div>
 	
 		<article>
-			<h2>Aceasta este pagina contului</h2>
-			
-			<p>Bine ai venit, <?php echo htmlspecialchars($_SESSION['username'], ENT_XHTML | ENT_QUOTES);?>! Ai rangul de <?php echo $_SESSION['rank'];?>.</p>
-			<a href='account-details.php' title='Account Details' data-toggle='tooltip'><button class='menubutton'>Account Details</button></a>
-			<a href='logout.php' title='Logout' data-toggle='tooltip'><button class='menubutton'>Logout</button></a>
+			<form action="fart.php" method="post" enctype="multipart/form-data">
+
+                <input type="file" name="file" size="100">
+
+                <br />
+
+                <input type="submit" name="submit" value="Upload">
+
+            </form>
 		</article>
 
 		<div id="column2"></div>
 
 	</section>
-	
+
 	<footer>
-		<!--<a class="links" href="https://www.youtube.com/watch?v=q5FcKAe4M1w" target="_blank">Aici vor fi link-uri.</a>-->
+		<p>Text</p>
 	</footer>
-	
+
 </body>
 </html>
