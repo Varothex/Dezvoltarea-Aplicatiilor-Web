@@ -17,8 +17,8 @@ if($_SESSION['agent'] != $_SERVER['HTTP_USER_AGENT'])
 
 // Token verification
 $_id = trim($_GET["id"]);
-echo "sesiune".$_SESSION["id"];
-echo "get".$_id;
+/*echo "sesiune".$_SESSION["id"];
+echo "get".$_id;*/
 if($_id and $_SESSION["id"] != $_id)
 {
     die('Invalid token.');

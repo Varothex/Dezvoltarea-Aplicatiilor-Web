@@ -137,7 +137,7 @@
 	<h1 style="text-align: center">Doctor Doom</h1>
 
 	<div class="menu">
-		<a href="menu.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
+		<a href="menu-logged.html" title='Menu' data-toggle='tooltip'><button class="menubutton">Menu</button></a>
 		<a href="character-details.html" title='Character Details' data-toggle='tooltip'><button class="menubutton">Character Details</button></a>
 		<a href="comics.html" title='Comics' data-toggle='tooltip'><button class="menubutton">Comics</button></a>
 		<a href="games.html" title='Games' data-toggle='tooltip'><button class="menubutton">Games</button></a>
@@ -146,7 +146,7 @@
 		<button class="menubutton">Merch</button>
 		<button class="menubutton">Forum</button>
 		<button class="menubuttonon">Fanart</button>
-		<a href="profile.html" title='Profile' data-toggle='tooltip'><button class="menubutton">Profile</button></a>
+		<a href="profile-logged.php" title='Profile' data-toggle='tooltip'><button class="menubutton">Profile</button></a>
 	</div>
 
 	<section>
